@@ -3,7 +3,7 @@ from agent import generate_stream, generate_response
 
 
 st.set_page_config(
-    page_title="Drug-GPT",
+    page_title="Recipe-GPT",
     page_icon="💊",
     menu_items={
         'About': "This app is a prototype made for demo purposes. It is not meant for real life use. Do not take anything from this app as advice."
@@ -31,7 +31,7 @@ for message in st.session_state.messages:
             st.write(message["content"])
 
 # Accept user input
-if prompt := st.chat_input("Message Drug-GPT"):
+if prompt := st.chat_input("Message Recipe-GPT"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     # Display user message in chat message container
