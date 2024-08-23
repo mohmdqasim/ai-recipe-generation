@@ -7,7 +7,7 @@ def generate_response(message_history):
     messages = [{"role": m["role"], "content": m["content"]} for m in message_history]
     messages.insert(0, {
         "role": "system", 
-        "content": """You are a helpful assistant named Recipe-GPT whose goal is to aid users with pharmaceutical recipe-related questions. 
+        "content": """You are a helpful assistant named Recipe-GPT whose goal is to aid users with recipe-related questions. 
         Make sure to introduce yourself in your initial message."""})
     response = client.chat.completions.create(
                 model="gpt-3.5-turbo-0125",
@@ -19,7 +19,7 @@ def generate_stream(message_history):
     messages = [{"role": m["role"], "content": m["content"]} for m in message_history]
     messages.insert(0, {
         "role": "system", 
-        "content": """You are a helpful assistant named Recipe-GPT whose goal is to aid users with pharmaceutical recipe-related questions. If a user 
+        "content": """You are a helpful assistant named Recipe-GPT whose goal is to aid users with recipe-related questions. If a user 
         asks for information about a recipe, give a brief description, then list the class of recipe, the mechanism of action, and the efficacy presented 
         using quantitative values. Also, list the recipe's main competitors in point form, along with a brief description of each. Do not respond to off-topic inquiries"""})
     stream = client.chat.completions.create(
