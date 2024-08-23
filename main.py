@@ -6,10 +6,10 @@ st.set_page_config(
     page_title="Recipe-GPT",
     page_icon="💊",
     menu_items={
-        'About': "This app is a prototype made for demo purposes. It is not meant for real life use. Do not take anything from this app as advice."
+        'About': "--"
     }
 )
-st.title("Drug-GPT")
+st.title("Personalised Recipe Generator")
 
 
 
